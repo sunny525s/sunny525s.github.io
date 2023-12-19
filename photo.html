@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Photography</title>
+  <link rel="icon" href="./favicon.ico">
+  <style>
+    body {
+      overflow-y: scroll;
+    }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .upper-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .lower-left {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.2rem;
+      color: #495057;
+    }
+
+    .gallery-container {
+      overflow-y: auto;
+      margin-top: 40px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      width: 100%;
+      margin-bottom: 20px;
+      height: auto;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .upper-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 300px;
+      /* Updated smaller width */
+      height: 300px;
+      /* Updated smaller height */
+    }
+
+    .lower-right {
+      position: absolute;
+      bottom: -15100px;
+      right: 5px;
+      padding: 10px;
+      width: 80px;
+      /* Updated smaller width */
+      height: 80px;
+      /* Updated smaller height */
+    }
+
+    .text-md {
+      font-size: 1.4rem;
+      /* Adjusted font size */
+      margin-top: -0.5rem;
+      /* Adjusted margin-top value */
+    }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInAnimation 1s ease-out forwards;
+    }
+
+    @keyframes slideInAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-container">
+    <div class="max-w-6xl p-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+
+        <div class="col-span-2 p-6 text-left md:text-left">
+          <div class="font-bold text-4xl md:text-5xl mb-4 md:mx-0">
+            Photography
+          </div>
+
+          <div class="gallery-container">
+            <div class="gallery-item slide-in">
+              <img src="photo/photo1.JPG" alt="Photo 1">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo2.JPG" alt="Photo 2">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo3.JPG" alt="Photo 3">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo4.JPG" alt="Photo 4">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo5.JPG" alt="Photo 5">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo6.JPG" alt="Photo 6">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo7.JPG" alt="Photo 7">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo8.JPG" alt="Photo 8">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo9.JPG" alt="Photo 9">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo10.JPG" alt="Photo 10">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo11.JPG" alt="Photo 11">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo12.JPG" alt="Photo 12">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo13.JPG" alt="Photo 13">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo14.JPG" alt="Photo 14">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo15.JPG" alt="Photo 15">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo16.JPG" alt="Photo 16">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo17.JPG" alt="Photo 17">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo18.JPG" alt="Photo 18">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo19.JPG" alt="Photo 19">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo20.JPG" alt="Photo 20">
+            </div>
+            <div class="gallery-item slide-in">
+              <img src="photo/photo21.JPG" alt="Photo 21">
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-xl6 p-6">
+          <div class="gallery-descriptions">
+            <div class="description-item">
+              <p><i>From Top to Bottom:</i></p>
+            </div>
+            <div class="description-item">
+              <p>Cornell University, Ithaca, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Niagara Falls, Ontario, Canada</p>
+            </div>
+            <div class="description-item">
+              <p>Niagara Falls, Ontario, Canada</p>
+            </div>
+            <div class="description-item">
+              <p>Niagara Falls, Ontario, Canada</p>
+            </div>
+            <div class="description-item">
+              <p>Adirondack Mountains, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Acadia National Park, Maine</p>
+            </div>
+            <div class="description-item">
+              <p>Albany, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Providence, Rhode Island</p>
+            </div>
+            <div class="description-item">
+              <p>Acadia National Park, Maine</p>
+            </div>
+            <div class="description-item">
+              <p>Adirondack Mountains, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Home Garden</p>
+            </div>
+            <div class="description-item">
+              <p>Adirondack Mountains, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Museum of Modern Arts, New York City, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Museum of Modern Arts, New York City, New York</p>
+            </div>
+            <div class="description-item">
+              <p>Newport, Rhode Island</p>
+            </div>
+            <div class="description-item">
+              <p>Miami, Florida</p>
+            </div>
+            <div class="description-item">
+              <p>Miami, Florida</p>
+            </div>
+            <div class="description-item">
+              <p>Yellowstone National Park, Montana</p>
+            </div>
+            <div class="description-item">
+              <p>Yellowstone National Park, Montana</p>
+            </div>
+            <div class="description-item">
+              <p>Yellowstone National Park, Montana</p>
+            </div>
+            <div class="description-item">
+              <p>Yellowstone National Park, Montana</p>
+            </div>
+            <!-- Add descriptions for other photos as needed -->
+          </div>
+        </div>
+
+        <div class="upper-right slide-in" id="linksContainer">
+          <div class="text-md text-gray-1000 p-4 grid place-items-center">
+            <div>
+              <a href="./index.html" class="hover:text-gray-1000">[Home]</a>
+              <a href="./about.html" class="hover:text-gray-1000">[About]</a>
+              <a href="./photo.html" class="hover:text-gray-1000">[Photography]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="upper-left slide-in" id="upperLeftPhotoContainer">
+          <img src="horizontal2.png" alt="Upper Left Photo">
+        </div>
+
+        <div class="lower-right slide-in" id="lowerRightPhotoContainer">
+          <img src="vertical2.png" alt="Lower Right Photo">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

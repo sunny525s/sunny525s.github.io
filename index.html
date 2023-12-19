@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,55 +7,199 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Sunny Sun</title>
   <link rel="icon" href="./favicon.ico">
-  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+<style>
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Minimum height of 100% of the viewport height */
+  }
+
+  .upper-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .lower-left {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+    color: #495057;
+    /* Dark gray color */
+  }
+
+  .upper-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+    width: 320px;
+    /* Updated smaller width */
+    height: 320px;
+    /* Updated smaller height */
+  }
+
+  .lower-right {
+    position: absolute;
+    bottom: 240px;
+    right: 5px;
+    padding: 5px;
+    width: 80px;
+    /* Updated smaller width */
+    height: 80px;
+    /* Updated smaller height */
+  }
+
+  .added-image {
+    width: 150px;
+    /* Adjust the size as needed */
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Adjusted font size and image size */
+  .font-bold {
+    font-size: 6rem;
+    /* Adjusted font size */
+    margin-top: -0.5rem;
+    /* Adjusted margin-top value */
+  }
+
+  .text-md {
+    font-size: 1.4rem;
+    /* Adjusted font size */
+    margin-top: -0.5rem;
+    /* Adjusted margin-top value */
+  }
+
+  .rounded-full {
+    width: 350px;
+    /* Adjusted image size */
+  }
+
+  /* New styles for animation */
+  .slide-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInAnimation 1s ease-out forwards;
+  }
+
+  @keyframes slideInAnimation {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 
 <body>
-  <div class="grid place-items-center">
+  <div class="content-container">
     <div class="max-w-6xl p-6">
       <div class="grid grid-cols-1 sm:grid-cols-5">
 
-        <div class="grid place-items-center p-2">
-          <img class="rounded-full w-50" src="resources/headshot.png">
+        <div class="grid place-items-center p-2 slide-in" id="headshotContainer">
+          <img class="rounded-full" src="resources/headshot.png" alt="Sunny Sun">
         </div>
 
         <div class="col-span-4">
-          <div class="font-bold text-6xl p-6 grid place-items-center">
+          <div class="font-bold text-6xl p-4 grid place-items-center slide-in" id="nameContainer">
             Sunny Sun
           </div>
-          <div class="text-md p-6 grid place-items-center">
+          <div class="text-md p-4 grid place-items-center slide-in" id="infoContainer">
             <div>
-              I am a Junior studying Computer science at Cornell University. My interests lie in the intersection
-              of Machine Learning and Math, Computer Vision, and Fullstack Development. I conduct research with the
-              <a class="text-sky-600 hover:text-sky-800" href="https://portal.cs.cornell.edu/" target="_blank"
-                rel="noopener noreferrer">PoRTaL Research Group</a> under the mentorship of Professor Sanjiban
-              Choudhury. I'm also part of the Intelligent Systems Subteam at <a class="text-sky-600 hover:text-sky-800"
-                href="https://cuair.org/" target="_blank" rel="noopener noreferrer">Cornell University Unmanned Air
-                Systems</a>.
-
+              <ul>
+                <li>Software Engineer</li>
+                <li>Studying Computer Science and Operations Research @ Cornell University</li>
+                <li>Machine Learning and Robotics Research @ <a class="text-gray-600 hover:text-gray-800"
+                    href="https://portal.cs.cornell.edu/" target="_blank" rel="noopener noreferrer">PoRTaL Group</a>
+                </li>
+                <li>
+                  Intelligent Systems Engineer @ <a class="text-gray-600 hover:text-gray-800" href="https://cuair.org/"
+                    target="_blank" rel="noopener noreferrer">Cornell University Unmanned Air Systems</a>
+                </li>
+                <li>
+                  Corporate Officer @ <a class="text-gray-600 hover:text-gray-800" href="https://acsu.cornell.edu/"
+                    target="_blank" rel="noopener noreferrer">Association of Computer Science Undergraduates @
+                    Cornell</a>
+                </li>
+                <li>Former Software Engineer Intern @ <a class="text-gray-600 hover:text-gray-800"
+                    href="https://www.merck.com/" target="_blank" rel="noopener noreferrer"> Merck & Co.
+                </li>
+                <li>John McMullen Dean’s Scholar</li>
+              </ul>
             </div>
           </div>
-          <div class="text-sm text-sky-600 p-3 grid place-items-center">
+          <div class="lower-left slide-in" id="contactContainer">
             <div>
-              <a href="mailto:xs275@cornell.edu" class="hover:text-sky-800" target="_blank"
-                rel="noopener noreferrer">[Email: xs275@cornell.edu]</a>
-              <a href="https://github.com/sunny525s" class="hover:text-sky-800" target="_blank"
+              <a href="mailto:xs275@cornell.edu" class="hover:text-gray-800" target="_blank"
+                rel="noopener noreferrer">[Email]</a>
+              <a href="https://github.com/sunny525s" class="hover:text-gray-800" target="_blank"
                 rel="noopener noreferrer">[Github]</a>
-              <a href="https://www.linkedin.com/in/sunny-sun25/" class="hover:text-sky-800" target="_blank"
+              <a href="https://www.linkedin.com/in/sunny-sun25/" class="hover:text-gray-800" target="_blank"
                 rel="noopener noreferrer">[LinkedIn]</a>
-              <a href="https://scholar.google.com/citations?user=j8c6XJgAAAAJ&hl=en" class="hover:text-sky-800"
+              <a href="https://scholar.google.com/citations?user=j8c6XJgAAAAJ&hl=en" class="hover:text-gray-800"
                 target="_blank" rel="noopener noreferrer">[Google Scholar]</a>
-              <a href=./resources/Xiangwan_Sun_Resume.pdf class="hover:text-sky-800" target="_blank"> [Resume]</a>
+              <a href="./resources/Xiangwan_Sun_Resume.pdf" class="hover:text-gray-800" target="_blank"> [Resume]</a>
             </div>
           </div>
+        </div>
+
+        <!-- Additional Links for About Me and Photography -->
+        <div class="upper-right slide-in" id="linksContainer">
+          <div class="text-md text-gray-600 p-4 grid place-items-center">
+            <div>
+              <a href="./index.html" class="hover:text-gray-800">[Home]</a>
+              <a href="./about.html" class="hover:text-gray-800">[About]</a>
+              <a href="./photo.html" class="hover:text-gray-800">[Photography]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="upper-left slide-in" id="upperLeftPhotoContainer">
+          <img src="horizontal.png" alt="Upper Left Photo">
+        </div>
+
+        <div class="lower-right slide-in" id="lowerRightPhotoContainer">
+          <img src="vertical.png" alt="Lower Right Photo">
         </div>
 
       </div>
     </div>
   </div>
 
+  <script>
+    // JavaScript for click interactivity
+    function toggleSlideIn(elementId) {
+      const element = document.getElementById(elementId);
+      element.classList.toggle('slide-in');
+    }
+
+    // Add click event listeners to trigger the toggleSlideIn function
+    document.getElementById('headshotContainer').addEventListener('click', function () {
+      toggleSlideIn('headshotContainer');
+    });
+
+    document.getElementById('nameContainer').addEventListener('click', function () {
+      toggleSlideIn('nameContainer');
+    });
+
+    document.getElementById('infoContainer').addEventListener('click', function () {
+      toggleSlideIn('infoContainer');
+    });
+
+    document.getElementById('contactContainer').addEventListener('click', function () {
+      toggleSlideIn('contactContainer');
+    });
+
+    document.getElementById('linksContainer').addEventListener('click', function () {
+      toggleSlideIn('linksContainer');
+    });
+  </script>
 </body>
-
-
 
 </html>

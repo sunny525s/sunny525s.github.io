@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Sunny Sun</title>
+  <link rel="icon" href="./favicon.ico">
+  <style>
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      /* Minimum height of 100% of the viewport height */
+    }
+
+    .upper-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .spaced-div {
+      margin-bottom: 20px;
+      /* This will add 20px of space below each div */
+    }
+
+    .font-bold {
+      font-size: 4rem;
+      /* Adjusted font size */
+      margin-top: -0.5rem;
+      /* Adjusted margin-top value */
+    }
+
+    .text-lg {
+      font-size: 1.2rem;
+      /* Adjusted font size */
+    }
+
+    .text-md {
+      font-size: 1.4rem;
+      /* Adjusted font size */
+      margin-top: -0.5rem;
+      /* Adjusted margin-top value */
+    }
+
+    .rounded-none {
+      border-radius: 0;
+      width: 75%;
+      /* Adjusted image size */
+
+    }
+
+    .text-base {
+      font-size: 1.4rem;
+      /* Adjusted font size */
+      margin-top: -0.5rem;
+      /* Adjusted margin-top value */
+    }
+
+    .lower-left {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      font-size: 1.2rem;
+      color: #495057;
+      /* Dark gray color */
+      display: flex;
+      flex-direction: column;
+    }
+
+    .upper-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 300px;
+      /* Updated smaller width */
+      height: 300px;
+      /* Updated smaller height */
+    }
+
+    .lower-right {
+      position: absolute;
+      bottom: -160px;
+      right: 5px;
+      padding: 10px;
+      width: 90px;
+      /* Updated smaller width */
+      height: 90px;
+      /* Updated smaller height */
+    }
+
+    .slide-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideInAnimation 1s ease-out forwards;
+    }
+
+    @keyframes slideInAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-container">
+    <div class="max-w-6xl p-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2">
+
+        <div class="col-span-2 p-6 text-center md:text-left">
+          <div class="font-bold text-4xl md:text-5xl mb-4 md: text-left mx-auto w-3/4 slide-in">
+            About Me
+          </div>
+
+          <div class="slide-in">
+            <!-- Make the photo a little smaller -->
+            <img src="resources/about.JPG" class="mx-auto rounded-none shadow-lg">
+          </div>
+
+          <div class="text-lg md:text-xl mt-6 text-gray-600 mx-auto w-3/4 text-center md:text-left slide-in">
+            <div class="spaced-div">
+              Hi! I'm a Junior at Cornell University, studying Computer Science and Operations Research. My interests
+              lie in the intersection of Machine Learning and Math, Computer Vision and Robotics, and Fullstack
+              Development. I specialize in vision-based robotics and aerial systems where I develop algorithms for
+              building intelligent autonomous devices.
+            </div>
+
+
+            <div class="spaced-div">
+              On campus, I conduct research with the <a class="text-sky-600 hover:text-sky-800"
+                href="https://portal.cs.cornell.edu/" target="_blank" rel="noopener noreferrer">PoRTaL Research
+                Group</a> under the mentorship of Professor Sanjiban Choudhury where we work on building accessible,
+              user-friendly robots for practical everyday tasks. I'm also part of the Intelligent Systems Subteam at <a
+                class="text-sky-600 hover:text-sky-800" href="https://cuair.org/" target="_blank"
+                rel="noopener noreferrer">Cornell University Unmanned Air Systems</a>, a student led project team
+              focused on building autonomous aircrafts.
+            </div>
+
+
+            <div class="spaced-div"> I was formerly a Software Engineer Intern at Merck & Co. where I worked on
+              developing a fullstack dashboard for the High-Performance Computing Team. I also previously worked as a
+              Research Intern at Rensselaer Polytechnic Institute and Brookhaven National Laboratory on Reinforcement
+              Learning and Fourier and Image Reconstruction Projects. </div>
+
+
+            <div class="spaced-div"> I’m interested in developing the future of the web by implementing human-centric,
+              intersectional products in elegant, functional ways for everyday people. Feel free to reach out via email
+              or LinkedIn!</div>
+          </div>
+        </div>
+
+        <div class="upper-right slide-in" id="linksContainer">
+          <div class="text-md text-gray-800 p-4 grid place-items-center slide-in">
+            <div>
+              <a href="./index.html" class="hover:text-gray-800">[Home]</a>
+              <a href="./about.html" class="hover:text-gray-800">[About]</a>
+              <a href="./photo.html" class="hover:text-gray-800">[Photography]</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="upper-left slide-in" id="upperLeftPhotoContainer">
+          <img src="horizontal1.png" alt="Upper Left Photo">
+        </div>
+
+        <div class="lower-right slide-in" id="lowerRightPhotoContainer">
+          <img src="vertical1.png" alt="Lower Right Photo">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
