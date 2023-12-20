@@ -81,6 +81,12 @@
       animation: slideInAnimation 1s ease-out forwards;
     }
 
+    @media screen and (max-width: 800px) {
+      .text-md {
+        font-size: 3vw;
+      }
+    }
+
     @keyframes slideInAnimation {
       to {
         opacity: 1;
@@ -239,11 +245,11 @@
         </div>
 
         <div class="upper-right slide-in" id="linksContainer">
-          <div class="text-md text-gray-1000 p-4 grid place-items-center">
+          <div class="text-md text-gray-800 p-4 grid place-items-center slide-in">
             <div>
-              <a href="./index.html" class="hover:text-gray-1000">[Home]</a>
-              <a href="./about.html" class="hover:text-gray-1000">[About]</a>
-              <a href="./photo.html" class="hover:text-gray-1000">[Photography]</a>
+              <a href="./index.html" class="hover:text-gray-800">[Home]</a>
+              <a href="./about.html" class="hover:text-gray-800">[About]</a>
+              <a href="./photo.html" class="hover:text-gray-800">[Photography]</a>
             </div>
           </div>
         </div>

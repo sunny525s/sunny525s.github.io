@@ -85,21 +85,16 @@
   }
 
   @media only screen and (max-width: 800px) {
-
-    /* Add styles for smaller screens */
     .text-md {
       font-size: 3vw;
-      /* Adjust the font size for smaller screens */
     }
 
     .rounded-full {
       width: 200px;
-      /* Adjust the width for smaller screens */
     }
 
     .lower-left {
       font-size: 2.3vw;
-      /* Adjust the font size for email and other links */
     }
   }
 </style>
@@ -181,13 +176,11 @@
   </div>
 
   <script>
-    // JavaScript for click interactivity
     function toggleSlideIn(elementId) {
       const element = document.getElementById(elementId);
       element.classList.toggle('slide-in');
     }
 
-    // Add click event listeners to trigger the toggleSlideIn function
     document.getElementById('headshotContainer').addEventListener('click', function () {
       toggleSlideIn('headshotContainer');
     });
