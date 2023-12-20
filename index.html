@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- <link rel="stylesheet" href="styles.css"> -->
   <title>Sunny Sun</title>
   <link rel="icon" href="./resources/favicon.ico">
 </head>
+
 <style>
   .content-container {
     display: flex;
@@ -16,7 +16,6 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    /* Minimum height of 100% of the viewport height */
   }
 
   .upper-right {
@@ -31,7 +30,6 @@
     left: 20px;
     font-size: 1.2vw;
     color: #495057;
-    /* Dark gray color */
   }
 
   .upper-left {
@@ -39,12 +37,7 @@
     top: 0;
     left: 0;
     padding: 5px;
-    /* width: 320px;
-    /* Updated smaller width */
-    /* height: 320px; */
-    /* Updated smaller height */
     width: 16%;
-    /* height: 9%; */
     height: auto;
   }
 
@@ -53,53 +46,55 @@
     bottom: 0px;
     right: 5px;
     padding: 5px;
-    /* width: 80px; */
-    /* Updated smaller width */
-    /* height: 80px; */
-    /* Updated smaller height */
     width: 4.2%;
-    /* height: 32%; */
     height: auto;
   }
 
   .added-image {
     width: 150px;
-    /* Adjust the size as needed */
     height: auto;
     border-radius: 8px;
   }
 
-  /* Adjusted font size and image size */
   .font-bold {
-    font-size: 6rem;
-    /* Adjusted font size */
-    margin-top: -0.5rem;
-    /* Adjusted margin-top value */
+    font-size: 4.5vw;
+    margin-top: -0.5vw;
   }
 
   .text-md {
     font-size: 1.4vw;
-    /* Adjusted font size */
     margin-top: -0.5vw;
-    /* Adjusted margin-top value */
   }
 
   .rounded-full {
     width: 350px;
-    /* Adjusted image size */
   }
 
-  /* New styles for animation */
   .slide-in {
     opacity: 0;
     transform: translateY(20px);
     animation: slideInAnimation 1s ease-out forwards;
   }
 
+
   @keyframes slideInAnimation {
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    /* Add styles for smaller screens */
+    .text-md {
+      font-size: 3vw;
+      /* Adjust the font size for smaller screens */
+    }
+
+    .rounded-full {
+      width: 200px;
+      /* Adjust the width for smaller screens */
     }
   }
 </style>
@@ -114,9 +109,10 @@
         </div>
 
         <div class="col-span-4">
-          <div class="font-bold text-6xl p-4 grid place-items-center slide-in" id="nameContainer">
+          <div class="font-bold p-4 grid place-items-center slide-in" id="nameContainer">
             Sunny Sun
           </div>
+
           <div class="text-md p-4 grid place-items-center slide-in" id="infoContainer">
             <div>
               <ul>
@@ -135,12 +131,13 @@
                     Cornell</a>
                 </li>
                 <li>Former Software Engineer Intern @ <a class="text-gray-600 hover:text-gray-800"
-                    href="https://www.merck.com/" target="_blank" rel="noopener noreferrer"> Merck & Co.
+                    href="https://www.merck.com/" target="_blank" rel="noopener noreferrer"> Merck & Co. </a>
                 </li>
                 <li>John McMullen Dean’s Scholar</li>
               </ul>
             </div>
           </div>
+
           <div class="lower-left slide-in" id="contactContainer">
             <div>
               <a href="mailto:xs275@cornell.edu" class="hover:text-gray-800" target="_blank"
@@ -156,7 +153,6 @@
           </div>
         </div>
 
-        <!-- Additional Links for About Me and Photography -->
         <div class="upper-right slide-in" id="linksContainer">
           <div class="text-md text-gray-600 p-4 grid place-items-center">
             <div>
